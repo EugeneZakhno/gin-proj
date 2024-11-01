@@ -14,7 +14,10 @@ func main() {
 			"message": "pong",
 		})
 	})
-	r.Run() // запускает сервер на 0.0.0.0:8080
+	err := r.Run()
+	if err != nil {
+		return
+	} // запускает сервер на 0.0.0.0:8080
 }
 
 //TIP See GoLand help at <a href="https://www.jetbrains.com/help/go/">jetbrains.com/help/go/</a>.
